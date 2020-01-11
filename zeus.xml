@@ -6,7 +6,7 @@
   <remote fetch="git://git.openembedded.org" name="oe"/>
   <remote fetch="https://github.com/meta-qt5" name="qt5"/>
   <remote fetch="git://git.yoctoproject.org" name="yocto"/>
-  <remote fetch="git@github.com:gaozhenyan" name="Gaozy"/>
+  <remote fetch="https://github.com/gaozhenyan" name="Gaozy"/>
 
   <default sync-c="true" sync-j="8" revision="zeus"/>
 
