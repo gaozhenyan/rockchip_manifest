@@ -12,7 +12,7 @@
 
   <project name="meta-openembedded" remote="oe" path="sources/meta-openembedded" />
   <project name="meta-qt5" remote="qt5" path="sources/meta-qt5"/>
-  <project name="meta-rockchip" remote="JeffyCN" revision="remotes/origin/release-1.2.0_20191227" upstream="release-1.2.0_20191227" path="sources/meta-rockchip"/>
+  <project name="meta-rockchip" remote="JeffyCN" revision="release-1.2.0_20191227" path="sources/meta-rockchip"/>
   <project name="meta-rockchip-extra" remote="Gaozy" path="sources/meta-rockchip-extra"/>
   <project name="rkbin" remote="rockchip" revision="master"  path="rkbin"/>
   <project remote="rockchip" revision="yocto" name="build" path="sources/base">
