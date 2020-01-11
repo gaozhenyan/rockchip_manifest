@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <notice>Your sources have been sync'd successfully.</notice>
+  <remote fetch="https://github.com/JeffyCN" name="JeffyCN"/>
+  <remote fetch="git://github.com/rockchip-linux" name="rockchip"/>
+  <remote fetch="git://git.openembedded.org" name="oe"/>
+  <remote fetch="https://github.com/meta-qt5" name="qt5"/>
+  <remote fetch="git://git.yoctoproject.org" name="yocto"/>
+  <remote fetch="git@github.com:gaozhenyan" name="Gaozy"/>
+
+  <default sync-c="true" sync-j="8" revision="zeus"/>
+
+  <project name="meta-openembedded" remote="oe" path="sources/meta-openembedded" />
+  <project name="meta-qt5" remote="qt5" path="sources/meta-qt5"/>
+  <project name="meta-rockchip" remote="JeffyCN" revision="remotes/origin/release-1.2.0_20191227" upstream="release-1.2.0_20191227" path="sources/meta-rockchip"/>
+  <project name="meta-rockchip-extra" remote="Gaozy" path="sources/meta-rockchip-extra"/>
+  <project name="rkbin" remote="rockchip" revision="master"  path="rkbin"/>
+  <project remote="rockchip" revision="yocto" name="build" path="sources/base">
+        <copyfile dest="README" src="README"/>
+        <copyfile dest="setup-environment" src="setup-environment"/>
+  </project>
+  
+  <project name="poky" remote="yocto" path="sources/poky">
+    <linkfile dest="scripts" src="scripts"/>
+    <linkfile dest="bitbake" src="bitbake"/>
+    <linkfile dest="meta-poky" src="meta-poky"/>
+    <linkfile dest=".templateconf" src=".templateconf"/>
+    <linkfile dest="oe-init-build-env" src="oe-init-build-env"/>
+    <linkfile dest="README.md" src="../.repo/manifests/README.md"/>
+  </project>
+  <extend-project name="yocto-conf" path="build/conf" remote="JeffyCN" revision="b0154fa414287f5fe6324ac8550dabb822934dc9" upstream="master"/>
+</manifest>
